@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+.UserForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+.UserInput {
+    padding: 10px;
+    font-size: 1.5em;
+    border: 0;
+    border-radius: 5px;
+    width: 400px;
+    background-color: #FFF;
+    font-family: 'Poppins', sans-serif;
+}
+.UserInput:focus {
+    background-color: #0000ff;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    color: #FFF;
+}
+
+@media (max-width: 767px) {
+    .UserInput {
+        padding: 5px;
+        font-size: 1.1em;
+        width: 80%;
+    }
+}

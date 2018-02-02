@@ -1,0 +1,46 @@
+.MessageList {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 75vw;
+    padding: 10px;
+    overflow: auto;
+ }
+ .Message {
+    background-color: #3333ff;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    vertical-align: top;
+    float: left;
+    margin: 20px 45px 5px 20px;
+    color: #FFF;
+    width: 20vw;
+    height: auto;
+}
+.Message::before {
+    background-color: #3333ff;
+    content: "\00a0";
+    display: block;
+    height: 16px;
+    position: absolute;
+    top: 11px;
+    transform:             rotate( 29deg ) skew( -35deg );
+        -ms-transform:     rotate( 29deg ) skew( -35deg );
+        -webkit-transform: rotate( 29deg ) skew( -35deg );
+    width:  20px;
+    left: -9px;
+}
+
+@media (max-width: 767px) {
+    .MessageList {
+        padding: 5px;    
+    }
+    .Message {
+        width: 80%;        
+    }
+}
+
+
