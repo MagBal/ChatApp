@@ -23,8 +23,8 @@ class App extends Component {
   }
   
   componentWillUnmount() {
-    socket.removeListener('message', this.messageReceive);
-    socket.removeListener('update', this.chatUpdate);
+    socket.removeListener("message", this.messageReceive);
+    socket.removeListener("update", this.chatUpdate);
     socket.close();
   }
   
