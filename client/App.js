@@ -22,6 +22,12 @@ class App extends Component {
     socket.on("update", ({ users }) => this.chatUpdate(users));
   }
   
+  componentWillUnmount() {
+    socket.removeListener('message', this.messageReceive);
+    socket.removeListener('update', this.chatUpdate)
+    socket.close();
+  }
+  
   render() {
     return this.state.name !== "" ? this.renderLayout() : this.renderUserForm();
   } 
