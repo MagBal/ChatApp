@@ -16,7 +16,7 @@ class App extends Component {
     this.state = { users: [], messages: [], text: "", name: "" };
   }
 
-  //zaimplementowania funkcji nasłuchujących na wiadomości typu update i message
+  //zaimplementowanie funkcji nasłuchujących na wiadomości typu update i message
   componentDidMount() {
     socket.on("message", message => this.messageReceive(message));
     socket.on("update", ({ users }) => this.chatUpdate(users));
@@ -24,7 +24,7 @@ class App extends Component {
   
   componentWillUnmount() {
     socket.removeListener('message', this.messageReceive);
-    socket.removeListener('update', this.chatUpdate)
+    socket.removeListener('update', this.chatUpdate);
     socket.close();
   }
   
