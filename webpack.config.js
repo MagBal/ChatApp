@@ -7,7 +7,7 @@ var webpack = require('webpack');
 var env = process.env.NODE_ENV || 'development';
 var plugins = [
   new HtmlWebpackPlugin({
-        template: 'public/index.html',
+        template: 'client/index.html',
         filename: 'index.html',
         inject: 'body',
     })

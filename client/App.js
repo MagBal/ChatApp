@@ -16,16 +16,30 @@ class App extends Component {
     this.state = { users: [], messages: [], text: "", name: "" };
   }
 
+  // componentWillMount() {
+  //   console.log('The component is ready to mount.');
+  // }
+
   //zaimplementowanie funkcji nasłuchujących na wiadomości typu update i message
   componentDidMount() {
     socket.on("message", message => this.messageReceive(message));
     socket.on("update", ({ users }) => this.chatUpdate(users));
+    //console.log('Mounting the component.');
   }
   
+  // componentWillUpdate() {
+  //  	console.log('Component updating.');
+  // }
+
+  // componentDidUpdate() {
+  //   console.log('Component updated!');
+  // }
+
   componentWillUnmount() {
     socket.removeListener("message", this.messageReceive);
     socket.removeListener("update", this.chatUpdate);
     socket.close();
+    //console.log('Component removal.');
   }
   
   render() {
